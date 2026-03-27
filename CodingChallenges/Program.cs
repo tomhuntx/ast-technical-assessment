@@ -9,11 +9,9 @@ Console.WriteLine($"Given {string.Join(", ", numbers)}");
 var (largest, smallest) = ArraySorting.GetLargestAndSmallest(numbers);
 Console.WriteLine($"Largest in array: = {largest}, Smallest in array = {smallest}");
 
-
 // Question 2
 
-Console.WriteLine("\n\n\n");
-Console.WriteLine("Question 2: Write a function that removes duplicate characters from a string");
+Console.WriteLine("\n\n\nQuestion 2: Write a function that removes duplicate characters from a string");
 
 string input = "itt_iwoorkosksi!";
 
@@ -22,3 +20,19 @@ Console.WriteLine($"Input: {input}");
 Console.WriteLine($"LINQ: {RemoveDuplicates.Simple(input)}");
 Console.WriteLine($"HashSet: {RemoveDuplicates.Classic(input)}");
 Console.WriteLine($"Nested Loops: {RemoveDuplicates.HashSet(input)}");
+
+Console.WriteLine("\n\n\nQuestion 3: Write a function that checks if two strings are anagrams");
+
+// Question 3
+
+// Helper method
+static string GetAnagramResult(string word1, string word2)
+{
+    bool result = AnagramChecker.AreAnagrams(word1, word2);
+    return $"Are \"{word1}\" and \"{word2}\" anagrams? {(result ? "Yes" : "No")}";
+}
+
+Console.WriteLine(GetAnagramResult("elbow", "below"));
+Console.WriteLine(GetAnagramResult("elbow", "echidna"));
+Console.WriteLine(GetAnagramResult("Vile", "Evil"));
+
