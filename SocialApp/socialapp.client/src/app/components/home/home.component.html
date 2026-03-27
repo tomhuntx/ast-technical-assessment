@@ -1,0 +1,29 @@
+<p-card header="Welcome to SocialApp">
+  <p>Connect with a social network</p>
+
+  <div class="social-buttons">
+    <button
+      pButton
+      label="Facebook"
+      icon="pi pi-facebook"
+      (click)="connect('facebook')"
+      class="p-button-primary"
+    ></button>
+
+    <button
+      pButton
+      label="Twitter"
+      icon="pi pi-twitter"
+      (click)="connect('twitter')"
+      class="p-button-info"
+    ></button>
+
+    <button
+      pButton
+      label="LinkedIn"
+      icon="pi pi-linkedin"
+      (click)="connect('linkedin')"
+      class="p-button-help"
+    ></button>
+  </div>
+</p-card>

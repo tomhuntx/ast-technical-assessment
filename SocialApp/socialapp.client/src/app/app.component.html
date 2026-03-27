@@ -1,0 +1,15 @@
+<div class="container">
+  @if (loading) {
+    <div class="center">
+      <p-progressSpinner></p-progressSpinner>
+    </div>
+  }
+
+  @if (!profile && !loading) {
+    <app-home (connectProvider)="connect($event)"> </app-home>
+  }
+
+  @if (profile) {
+    <app-profile [profile]="profile" (logoutEvent)="logout()"> </app-profile>
+  }
+</div>

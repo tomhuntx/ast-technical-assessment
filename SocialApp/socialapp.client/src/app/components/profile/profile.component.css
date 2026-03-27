@@ -1,0 +1,19 @@
+.profile-header {
+  text-align: center;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.post img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.logout {
+  margin-top: 20px;
+  width: 100%;
+}
