@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="socialapp.client/socialapp.client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="SocialApp.Server/SocialApp.Server.csproj" />
+</Solution>
