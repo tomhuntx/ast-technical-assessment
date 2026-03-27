@@ -1,9 +1,9 @@
+namespace CodingChallenges;
+
 /*
  * Question 1:
- * Write a function that finds the largest and smallest numbers in an array
+ * Write a function that finds the largest and smallest numbers in an array.
  */
-
-namespace CodingChallenges;
 
 public static class ArraySorting
 {

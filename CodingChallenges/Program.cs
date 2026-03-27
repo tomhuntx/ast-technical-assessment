@@ -13,7 +13,7 @@ Console.WriteLine($"Largest in array: = {largest}, Smallest in array = {smallest
 
 Console.WriteLine("\n\n\nQuestion 2: Write a function that removes duplicate characters from a string");
 
-string input = "itt_iwoorkosksi!";
+string input = "itt iwoor kosk si!!!";
 
 Console.WriteLine($"Input: {input}");
 
@@ -21,9 +21,9 @@ Console.WriteLine($"LINQ: {RemoveDuplicates.Simple(input)}");
 Console.WriteLine($"HashSet: {RemoveDuplicates.Classic(input)}");
 Console.WriteLine($"Nested Loops: {RemoveDuplicates.HashSet(input)}");
 
-Console.WriteLine("\n\n\nQuestion 3: Write a function that checks if two strings are anagrams");
-
 // Question 3
+
+Console.WriteLine("\n\n\nQuestion 3: Write a function that checks if two strings are anagrams");
 
 // Helper method
 static string GetAnagramResult(string word1, string word2)
@@ -36,3 +36,17 @@ Console.WriteLine(GetAnagramResult("elbow", "below"));
 Console.WriteLine(GetAnagramResult("elbow", "echidna"));
 Console.WriteLine(GetAnagramResult("Vile", "Evil"));
 
+// Question 4
+
+Console.WriteLine("\n\n\nQuestion 4: Write a RegEx to match an Australian mobile phone");
+
+// Helper method
+static string GetPhoneValidationResult(string number)
+{
+    bool isValid = PhoneValidator.IsValidMobile(number);
+    return $"Is \"{number}\" a valid Australian mobile? {(isValid ? "Yes" : "No")}";
+}
+
+Console.WriteLine(GetPhoneValidationResult("0412 345 678"));
+Console.WriteLine(GetPhoneValidationResult("+61412345678"));
+Console.WriteLine(GetPhoneValidationResult("12345"));
