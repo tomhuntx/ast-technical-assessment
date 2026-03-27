@@ -10,7 +10,7 @@ public class LoginService : ILoginService
         {
             Name = "Geraldine Smith",
             Email = "gsmith@gmail.com",
-            Phone = "+614000000",
+            Phone = "0411222333",
             ProfilePicture = GetDummyProfileImage(provider),
             Posts = GetDummyPosts(provider)
         };
@@ -21,9 +21,9 @@ public class LoginService : ILoginService
         return provider switch
         {
             SocialProvider.Facebook => "https://picsum.photos/id/237/200",
-            SocialProvider.Twitter => "https://picsum.photos/200",
-            SocialProvider.LinkedIn => "https://picsum.photos/200",
-            _ => "https://picsum.photos/200"
+            SocialProvider.Twitter => "https://picsum.photos/seed/twitter-profile/200",
+            SocialProvider.LinkedIn => "https://picsum.photos/seed/linkedin-profile/200",
+            _ => "https://picsum.photos/seed/default-profile/200"
         };
     }
 
@@ -33,23 +33,23 @@ public class LoginService : ILoginService
         {
             SocialProvider.Facebook =>
                 [
-                    new UserPost { Text = "Enjoying a sunny day ☀️", Image = "https://picsum.photos/600/400" },
-                    new UserPost { Text = "Family BBQ this weekend!", Image = "https://picsum.photos/600/400" },
-                    new UserPost { Text = "Holiday memories ❤️", Image = "https://picsum.photos/600/400" }
+                    new UserPost { Text = "Nothing beats a bright sunny day outdoors ☀️", Image = "https://picsum.photos/seed/fb1/600/400" },
+                new UserPost { Text = "Good food, fresh air, and great company 🔥", Image = "https://picsum.photos/seed/fb2/600/400" },
+                new UserPost { Text = "Still thinking about this beautiful getaway ❤️", Image = "https://picsum.photos/seed/fb3/600/400" }
                 ],
 
             SocialProvider.Twitter =>
                 [
-                    new UserPost { Text = "Just shipped some code 🚀", Image = "https://picsum.photos/600/400" },
-                    new UserPost { Text = "Coffee is life ☕", Image = "https://picsum.photos/600/400" },
-                    new UserPost { Text = "Debugging... again 😅", Image = "https://picsum.photos/600/400" }
+                    new UserPost { Text = "Late night coding session vibes 💻", Image = "https://picsum.photos/seed/tw1/600/400" },
+                new UserPost { Text = "Powered by caffeine as always ☕", Image = "https://picsum.photos/seed/tw2/600/400" },
+                new UserPost { Text = "When things finally start working 😅", Image = "https://picsum.photos/seed/tw3/600/400" }
                 ],
 
             SocialProvider.LinkedIn =>
                 [
-                    new UserPost { Text = "Excited to share my latest project!", Image = "https://picsum.photos/600/400" },
-                    new UserPost { Text = "Networking with amazing professionals.", Image = "https://picsum.photos/600/400" },
-                    new UserPost { Text = "Continuous learning is key to growth.", Image = "https://picsum.photos/600/400" }
+                    new UserPost { Text = "Excited to bring this project to life 🚀", Image = "https://picsum.photos/seed/li1/600/400" },
+                new UserPost { Text = "Great conversations and meaningful connections 🤝", Image = "https://picsum.photos/seed/li2/600/400" },
+                new UserPost { Text = "Always learning, always improving 📈", Image = "https://picsum.photos/seed/li3/600/400" }
                 ],
             _ => []
         };
