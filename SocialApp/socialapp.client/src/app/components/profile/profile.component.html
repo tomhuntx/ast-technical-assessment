@@ -1,6 +1,13 @@
 <p-card class="profile-card">
   <ng-template pTemplate="header">
     <div class="profile-header">
+      <button
+        pButton
+        label="Logout"
+        icon="pi pi-sign-out"
+        class="p-button-danger logout"
+        (click)="logout()"
+      ></button>
       <p-avatar
         [image]="profile.profilePicture"
         size="xlarge"
@@ -9,7 +16,6 @@
       <h2>{{ profile.name }}</h2>
     </div>
   </ng-template>
-
   <p><strong>Email:</strong> {{ profile.email }}</p>
   <p><strong>Phone:</strong> {{ profile.phone }}</p>
 
@@ -23,12 +29,4 @@
       </p-card>
     }
   </div>
-
-  <button
-    pButton
-    label="Logout"
-    icon="pi pi-sign-out"
-    class="p-button-danger logout"
-    (click)="logout()"
-  ></button>
 </p-card>
