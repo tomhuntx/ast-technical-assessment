@@ -1,13 +1,11 @@
-# AST Assessment – Overview & Run Instructions
+# AST Assessment
 
 ## Overview
 
 Hi there Sharon & Co!
-This is a simple demo application built by Tom Hunter as an assessment for AST Solutions.
-Please let me know if you have any difficulty running the app. The following is AI-generated.
 
-It is a simple demo application with a backend API and frontend.
-The project is configured so that running the backend will automatically launch the frontend.
+This is a simple demo application built by Tom Hunter as an assessment for AST Solutions.
+Please let me know if you have any difficulty running the app.
 
 This solution contains two separate projects:
 
@@ -45,7 +43,7 @@ This will:
 
 ## Notes
 
-- .NET 10 and VS 2022 recommended
+- .NET 10 SDK and Node.js 18+ are required and VS 2022 is recommended
 - No separate frontend startup is required
 - The app uses dummy data and placeholder images for demonstration purposes
 - Unit testing was not added due to time constraints but I have a strong understanding of nUnit, xUnit, and more
